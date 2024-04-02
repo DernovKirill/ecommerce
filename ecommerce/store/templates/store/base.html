@@ -131,7 +131,16 @@
 
 
                         <i class="fa fa-shopping-cart" aria-hidden="true"> </i>
-
+                        &nbsp;
+                        <div id="cart-qty" class="d-inline-flex">
+                            {% with qty_ammount=cart|length %}
+                                {% if qty_ammount > 0 %}
+                                    {{qty_ammount}}
+                                {% else %}
+                                    0
+                                {% endif %}
+                            {% endwith %}
+                        </div>
 
                     </a>
 
